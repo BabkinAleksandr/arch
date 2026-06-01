@@ -31,3 +31,4 @@ iwd
 grim
 slurp
 thunar
+stow

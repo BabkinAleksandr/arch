@@ -12,15 +12,15 @@ echo "packages: finished"
 # systemd config
 echo "systemd: started"
 sudo mkdir -p /etc/systemd/logind.conf.d
-sudo cp ~/arch/systemd/ignore-power-key.conf /etc/systemd/logind.conf.d/ignore-power-key.conf
+sudo cp ./systemd/ignore-power-key.conf /etc/systemd/logind.conf.d/ignore-power-key.conf
 sudo systemctl restart systemd-logind
 sudo mkdir -p /etc/systemd/network
-sudo cp ~/arch/systemd/20-wireless.network /etc/systemd/network/20-wireless.network
+sudo cp ./systemd/20-wireless.network /etc/systemd/network/20-wireless.network
 echo "systemd: finished"
 
 # iwd config
 echo "iwd: started"
-sudo cp ~/arch/iwd/main.conf /etc/iwd/main.conf
+sudo cp ./iwd/main.conf /etc/iwd/main.conf
 sudo systemctl enable --now iwd
 echo "iwd: finished"
 
