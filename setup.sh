@@ -5,7 +5,7 @@ echo "=== Arch setup ==="
 
 # Install packages
 echo "packages: started"
-mapfile -t packages < ~/arch/packages/packages.txt
+mapfile -t packages < ./packages/packages.txt
 sudo pacman -S --noconfirm "${packages[@]}"
 echo "packages: finished"
 
